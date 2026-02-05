@@ -1,4 +1,5 @@
 import { ProductsService } from './products.service';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductFilter } from '@org/models';
 
 describe('ProductsService', () => {

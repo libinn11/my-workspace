@@ -6,7 +6,8 @@
     "build":"npx nx run-many --target=build --all",
     "build:api": "npx nx build api",
     "build:shop": "npx nx build shop",
-    "test:products": "npx nx test products"
+    "test:products": "npx nx test products",
+    "lint:shared-ui": "nx run shared-ui:lint"
   },
   "type": "commonjs",
   "private": true,

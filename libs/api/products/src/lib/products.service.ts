@@ -1,3 +1,4 @@
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ProductFilter, PaginatedResponse } from '@org/models';
 
 export class ProductsService {

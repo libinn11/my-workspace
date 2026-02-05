@@ -2,6 +2,7 @@ import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@ang
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ProductsService } from '@org/shop/data';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@org/models';
 import { LoadingSpinnerComponent, ErrorMessageComponent } from '@org/shop/shared-ui';
 

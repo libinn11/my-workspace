@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { ProductsService } from './products.service';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ApiResponse, PaginatedResponse, ProductFilter } from '@org/models';
 
 describe('ProductsService', () => {

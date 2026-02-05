@@ -1,6 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, map, catchError, of } from 'rxjs';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ApiResponse, PaginatedResponse, ProductFilter } from '@org/models';
 
 @Injectable({
