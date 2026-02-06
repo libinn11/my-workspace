@@ -3,17 +3,11 @@
   "compilerOptions": {
     "outDir": "../../../dist/out-tsc",
     "declaration": true,
-    "declarationMap": true,
-    "inlineSources": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "es2022", // Use es2022
+    "moduleResolution": "bundler", // Use bundler
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "exclude": [
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ],
+  "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
   "include": ["**/*.ts"]
 }

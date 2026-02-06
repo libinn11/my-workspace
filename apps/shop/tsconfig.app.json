@@ -2,8 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "module": "Node16",           // Must match base config
-    "moduleResolution": "Node16", // Must match base config
+    "module": "es2022",  // Use es2022 with bundler
+    "moduleResolution": "bundler",  // Use bundler
     "target": "es2022",
     "useDefineForClassFields": false,
     "lib": ["es2022", "dom"],

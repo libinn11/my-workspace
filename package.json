@@ -2,7 +2,6 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "type": "module",
   "private": true,
   "scripts": {
     "build": "npx nx run-many --target=build --all",
@@ -15,7 +14,8 @@
     "lint:api": "nx run api:lint",
     "lint:data": "nx run data:lint",
     "lint:feature-products":"nx run feature-products:lint",
-    "lint:feature-products-detail":"nx run feature-product-detail:lint"
+    "lint:feature-products-detail":"nx run feature-product-detail:lint",
+    "test-build-typecheck":"npx nx run-many -t lint test build typecheck e2e"
   },
   "dependencies": {
     "@angular-devkit/build-angular": "21.1.2",

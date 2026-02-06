@@ -4,8 +4,8 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "Node16",  // Must match module
-    "module": "Node16",            // Add this line
+    "moduleResolution": "bundler",  // Use "bundler" instead of "Node16"
+    "module": "es2022",  // Can use es2022 with bundler
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
