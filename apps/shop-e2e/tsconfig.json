@@ -4,7 +4,8 @@
     "allowJs": true,
     "outDir": "../../dist/out-tsc",
     "sourceMap": false,
-    "module": "commonjs",
+    "module": "Node16",           // Add this
+    "moduleResolution": "Node16",  // Add this if not present
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
