@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { ProductListComponent } from './product-list.component';
 import { ProductsService } from '@org/shop/data';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@org/models';
 import { describe, it, beforeEach, expect, vi } from 'vitest';
 

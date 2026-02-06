@@ -1,6 +1,5 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { ProductCardComponent } from './product-card.component';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@org/models';
 import { describe, it, beforeEach, expect, vi } from 'vitest';
 

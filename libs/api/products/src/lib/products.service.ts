@@ -1,4 +1,3 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ProductFilter, PaginatedResponse } from '@org/models';
 
 export class ProductsService {
@@ -36,19 +35,19 @@ export class ProductsService {
     if (filter) {
       if (filter.category) {
         filteredProducts = filteredProducts.filter(
-          p => p.category === filter.category
+          p => p.category === (filter.category || 0)
         );
       }
 
       if (filter.minPrice !== undefined) {
         filteredProducts = filteredProducts.filter(
-          p => p.price >= filter.minPrice
+          p => p.price >= (filter.minPrice || 0)
         );
       }
 
       if (filter.maxPrice !== undefined) {
         filteredProducts = filteredProducts.filter(
-          p => p.price <= filter.maxPrice
+          p => p.price <= (filter.maxPrice || 0)
         );
       }
 

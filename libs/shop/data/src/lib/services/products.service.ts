@@ -1,8 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, map, catchError, of } from 'rxjs';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { Product, ApiResponse, PaginatedResponse, ProductFilter } from '@org/models';
+import { Product, PaginatedResponse, ProductFilter } from '@org/models';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +21,7 @@ export class ProductsService {
     filter?: ProductFilter,
     page = 1,
     pageSize = 12
-  ): Observable<PaginatedResponse<Product>> {
+  ): Observable<PaginatedResponse<Product | null | undefined>> {
     this.loadingSignal.set(true);
     this.errorSignal.set(null);
 
@@ -49,11 +48,11 @@ export class ProductsService {
     }
 
     return this.http
-      .get<ApiResponse<PaginatedResponse<Product>>>(`${this.apiUrl}/products`, {
+      .get(`${this.apiUrl}/products`, {
         params,
       })
       .pipe(
-        map((response) => {
+        map((response:any) => {
           this.loadingSignal.set(false);
           if (!response.success) {
             throw new Error(response.error || 'Failed to load products');
@@ -82,9 +81,9 @@ export class ProductsService {
     this.errorSignal.set(null);
 
     return this.http
-      .get<ApiResponse<Product>>(`${this.apiUrl}/products/${id}`)
+      .get(`${this.apiUrl}/products/${id}`)
       .pipe(
-        map((response) => {
+        map((response:any) => {
           this.loadingSignal.set(false);
           if (!response.success) {
             throw new Error(response.error || 'Failed to load product');
@@ -104,9 +103,9 @@ export class ProductsService {
 
   getCategories(): Observable<string[]> {
     return this.http
-      .get<ApiResponse<string[]>>(`${this.apiUrl}/products-metadata/categories`)
+      .get(`${this.apiUrl}/products-metadata/categories`)
       .pipe(
-        map((response) => {
+        map((response:any) => {
           if (!response.success) {
             throw new Error(response.error || 'Failed to load categories');
           }
@@ -121,11 +120,11 @@ export class ProductsService {
 
   getPriceRange(): Observable<{ min: number; max: number }> {
     return this.http
-      .get<ApiResponse<{ min: number; max: number }>>(
+      .get(
         `${this.apiUrl}/products-metadata/price-range`
       )
       .pipe(
-        map((response) => {
+        map((response:any) => {
           if (!response.success) {
             throw new Error(response.error || 'Failed to load price range');
           }

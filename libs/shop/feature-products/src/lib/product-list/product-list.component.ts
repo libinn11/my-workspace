@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProductsService } from '@org/shop/data';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ProductFilter } from '@org/models';
 import {
   ProductGridComponent,

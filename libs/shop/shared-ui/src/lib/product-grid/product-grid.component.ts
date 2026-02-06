@@ -1,6 +1,5 @@
 import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@org/models';
 import { ProductCardComponent } from '../product-card/product-card.component';
 

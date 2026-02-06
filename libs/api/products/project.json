@@ -2,6 +2,7 @@
   "name": "products",
   "projectType": "library",
   "sourceRoot": "libs/api/products/src",
+  "tags": ["scope:api"],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
