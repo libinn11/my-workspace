@@ -6,12 +6,15 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "target": "es2022",
-    "moduleResolution": "bundler",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "emitDecoratorMetadata": false,
+    "outDir": "../../dist/out-tsc",
     "module": "preserve",
-    "lib": ["dom", "es2022"]
+    "lib": ["dom", "es2020"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

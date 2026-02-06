@@ -1,7 +1,7 @@
 {
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "commonjs"
+    // Remove module setting here - it's in tsconfig.lib.json
   },
   "files": [],
   "include": [],
@@ -11,6 +11,9 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "../../shared/models/tsconfig.lib.json"
     }
   ]
 }

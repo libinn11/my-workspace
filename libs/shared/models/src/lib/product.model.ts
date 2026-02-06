@@ -11,7 +11,7 @@ export interface Product {
 }
 
 export interface ApiResponse<T> {
-  data: T;
+  data?: T | null | undefined;
   success: boolean;
   message?: string;
   error?: string;

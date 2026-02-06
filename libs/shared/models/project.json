@@ -1,9 +1,16 @@
 {
   "name": "models",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/models/src",
   "projectType": "library",
-  "tags": ["scope:shared", "type:data"],
-  "// targets": "to see all targets run: nx show project models --web",
-  "targets": {}
+  "sourceRoot": "libs/shared/models/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "main": "libs/shared/models/src/index.ts",
+        "tsConfig": "libs/shared/models/tsconfig.lib.json",
+        "outputPath": "dist/libs/shared/models"
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:data"]
 }

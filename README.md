@@ -1,3 +1,7 @@
+## Requirements
+- Node.js >= 22.12.0
+- npm >= 10.x
+
 # Nx Angular Repository
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>

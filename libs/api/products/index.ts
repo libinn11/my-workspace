@@ -1,0 +1,1 @@
+export * from '../products/src/lib/products.service';

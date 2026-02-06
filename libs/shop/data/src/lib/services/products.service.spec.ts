@@ -102,7 +102,7 @@ describe('ProductsService', () => {
       const errorResponse: ApiResponse<PaginatedResponse<Product>> = {
         success: false,
         error: 'Server error',
-        data: undefined as unknown
+        data: undefined 
       };
 
       // Silence console.error for this test

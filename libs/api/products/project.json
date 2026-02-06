@@ -1,9 +1,16 @@
 {
   "name": "products",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/products/src",
   "projectType": "library",
+  "sourceRoot": "libs/api/products/src",
   "tags": ["scope:api"],
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "main": "libs/api/products/src/index.ts",
+        "tsConfig": "libs/api/products/tsconfig.lib.json",
+        "outputPath": "dist/libs/api/products"
+      }
+    }
   }
 }

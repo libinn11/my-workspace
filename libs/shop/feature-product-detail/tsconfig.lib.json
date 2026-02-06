@@ -3,9 +3,10 @@
   "compilerOptions": {
     "outDir": "../../../dist/out-tsc",
     "declaration": true,
-    "declarationMap": true,
-    "inlineSources": true,
-    "types": []
+    "module": "es2022",  // Use es2022
+    "moduleResolution": "bundler",  // Use bundler
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["src/**/*.spec.ts", "src/test-setup.ts"],
   "include": ["src/**/*.ts"]
